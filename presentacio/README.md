@@ -17,7 +17,7 @@
 - per què estudies aquest mòdul?
 - continuaràs estudiant després?
 
-## Petit asesorament sobre sortides professionals
+## Petit assessorament sobre sortides professionals
 
 ## Linkedin
 
