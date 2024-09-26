@@ -1,4 +1,5 @@
-# M06 - SEGURETAT INNFORMÀTICA - SMX02
+# M06 - SEGURETAT INFORMÀTICA - SMX02
+**Institut Carles Vallbona 2024-2025**
 
 ## Objectius
 - Identificar els tipus d'accés al sistema així com els mecanismes de seguretat descrivint les
@@ -9,4 +10,4 @@ tècniques per assegurar la integritat de la informació
 - Conèixer la legislació sobre protecció de dades
 - Aplicar mecanismes de seguretat activa descrivint-les.
 
-Institut Carles Vallbona 2024-2025
+
