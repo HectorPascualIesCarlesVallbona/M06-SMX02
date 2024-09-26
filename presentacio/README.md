@@ -2,6 +2,8 @@
 
 ## Presentació docent
 
+...
+
 ## Fitxa inici curs
 
 [fitxa curricular](https://moodle.iescarlesvallbona.cat/pluginfile.php/179759/mod_resource/content/3/ED2SMX_FI_2324_001_R1_M06.pdf)
@@ -15,13 +17,15 @@
 - tens consola a casa?
 - a quins jocs jugues?
 - per què estudies aquest mòdul?
-- continuaràs estudiant després?
+- continuaràs estudiant després? en el cas que sí, el què?
 
 ## Petit assessorament sobre sortides professionals
 
-## Linkedin
+...
 
+## LinkedIn
+
+- [linkedin](https://es.linkedin.com/)
 - xarxa social per crear contactes professionals i cercar feina IT
 - indispensable per cercar feina relacionada amb manteniment de xarxes, ciberseguretat i desenvolupament de software
 - l'alumne haurà de crear perfil estudiant o professional, que amb el pas dels anys anirà evolucionant. Al final del mòdul escriuré una recomanació a l'estudiant
-
