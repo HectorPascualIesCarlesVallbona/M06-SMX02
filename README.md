@@ -1,4 +1,4 @@
-# M06 - SEGURETAT INFORMÀTICA - SMX02
+# M06 - SMX02 - SEGURETAT INFORMÀTICA
 **Institut Carles Vallbona 2024-2025**
 
 ## Objectius
