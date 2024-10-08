@@ -7,3 +7,6 @@
 
 ┌──(kali㉿kali)-[/media/sf_ripper/test-practica01-C2]
 └─$ sudo cp /mnt/etc/passwd /mnt/etc/shadow RUTADETUPRACTICA
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ unshadow passwd shadow > passwords-hpascual
