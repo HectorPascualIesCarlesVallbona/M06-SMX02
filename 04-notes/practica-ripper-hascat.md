@@ -137,7 +137,7 @@ Device     Boot Start      End  Sectors Size Id Type
 └─$ sudo mount /dev/sdb1 /mnt
 
 ┌──(kali㉿kali)-[/media/sf_ripper/newTest]
-└─$ sudo cp /mnt/etc/passwd /mnt/etc/shadow /root/
+└─$ sudo cp /mnt/etc/passwd /mnt/etc/shadow /media/sf_ripper/test-practica01-C2
 
 ┌──(kali㉿kali)-[/media/sf_ripper/newTest]
 └─$ sudo cp /mnt/etc/passwd /mnt/etc/shadow /media/sf_ripper/newTest
