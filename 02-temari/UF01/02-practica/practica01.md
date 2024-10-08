@@ -10,3 +10,6 @@
 
 ┌──(kali㉿kali)-[/media/sf_ripper/newTest]
 └─$ unshadow passwd shadow > passwords-hpascual
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ john --single passwords-hpascual  
