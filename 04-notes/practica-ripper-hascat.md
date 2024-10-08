@@ -103,28 +103,93 @@ hashcat --show -m 17200 -a 0 fitxer-hash.txt fitxer-diccionari.txt
 
 -----
 
-3. Compilar john des del codi font per suportar yescrypt
-Si necessites utilitzar john i vols suport per a yescrypt, pots compilar-lo des del codi font per obtenir una versió amb suport complet. Aquí tens com fer-ho:
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ fdisk -l
+fdisk: cannot open /dev/sda: Permission denied
+fdisk: cannot open /dev/sdb: Permission denied
 
-Instal·la les eines de compilació:
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ sudo fdisk -l
+[sudo] password for kali:
+Disk /dev/sda: 80.09 GiB, 86000000000 bytes, 167968750 sectors
+Disk model: VBOX HARDDISK
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xff8eb69a
 
-bash
-Copia el codi
-sudo apt install build-essential libssl-dev git
-Clona el repositori de john:
+Device     Boot Start       End   Sectors  Size Id Type
+/dev/sda1  *     2048 167968749 167966702 80.1G 83 Linux
 
-bash
-Copia el codi
-git clone <https://github.com/openwall/john> -b bleeding-jumbo john
-Compila john:
+Disk /dev/sdb: 8 GiB, 8589934592 bytes, 16777216 sectors
+Disk model: VBOX HARDDISK
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xfb6f555a
 
-bash
-Copia el codi
-cd john/src
-./configure && make -s clean && make -sj4
-Executa el john compilat:
+Device     Boot Start      End  Sectors Size Id Type
+/dev/sdb1        2048 16777215 16775168   8G 83 Linux
 
-bash
-Copia el codi
-./run/john --format=yescrypt /home/kali/treball_elmeunom/passwords-nomcognom.txt
-Amb aquestes opcions, hauràs de ser capaç d'abordar aquest problema utilitzant la tècnica o eina més adequada per al format yescrypt. Si necessites més ajuda en algun pas, no dubtis a preguntar!
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ sudo mount /dev/sdb1 /mnt
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ sudo cp /mnt/etc/passwd /mnt/etc/shadow /root/
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ sudo cp /mnt/etc/passwd /mnt/etc/shadow /media/sf_ripper/newTest
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ ls
+confidencial.txt                passwd          shadow
+confi.zip                       rockyou.txt
+fitxer-hash-hector-pascual.txt  rockyou.txt.gz
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ unshadow passwd shadow > passwords-hpascual
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ ls
+confidencial.txt                passwd              rockyou.txt.gz
+confi.zip                       passwords-hpascual  shadow
+fitxer-hash-hector-pascual.txt  rockyou.txt
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ john --single passwords-hpascual  
+
+Warning: detected hash type "sha512crypt", but the string is also recognized as "HMAC-SHA256"
+Use the "--format=HMAC-SHA256" option to force loading these as that type instead
+Using default input encoding: UTF-8
+Loaded 8 password hashes with 8 different salts (sha512crypt, crypt(3) $6$ [SHA512 256/256 AVX2 4x])
+Cost 1 (iteration count) is 5000 for all loaded hashes
+Will run 2 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Warning: Only 2 candidates buffered for the current salt, minimum 8 needed for performance.
+maria            (maria)
+Warning: Only 3 candidates buffered for the current salt, minimum 8 needed for performance.
+Warning: Only 4 candidates buffered for the current salt, minimum 8 needed for performance.
+Warning: Only 3 candidates buffered for the current salt, minimum 8 needed for performance.
+jordi123         (jordi)
+Almost done: Processing the remaining buffered candidate passwords, if any.
+2g 0:00:00:01 DONE (2024-10-08 10:54) 1.000g/s 2865p/s 2889c/s 2889C/s felip1906..felip1900
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed.
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ john --show --single passwords-hpascual
+
+Invalid options combination: "--show"
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$ john --show passwords-hpascual
+
+maria:maria:1001:1001:,,,:/home/maria:/bin/bash
+jordi:jordi123:1002:1002:,,,:/home/jordi:/bin/bash
+
+2 password hashes cracked, 6 left
+
+┌──(kali㉿kali)-[/media/sf_ripper/newTest]
+└─$

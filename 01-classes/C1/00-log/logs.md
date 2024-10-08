@@ -7,3 +7,8 @@
 # 03102024
 
 - [] REPTE: Obtenir contrasenyes amb John the Ripper i Hashcat
+
+# 08102024
+
+- acabar repte john the ripper
+- kahoot
