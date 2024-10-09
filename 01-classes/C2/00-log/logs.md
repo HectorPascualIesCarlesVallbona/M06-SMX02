@@ -16,3 +16,7 @@
 # 08102024
 
 - REPTE: Obtenir contrasenyes amb John the Ripper i Hashcat => acabat presentar pràctica següent classe
+
+# 10102024
+
+- start pràctica Keepass

@@ -11,4 +11,7 @@
 # 08102024
 
 - acabar repte john the ripper
-- kahoot
+
+# 10102024
+
+- start pràctica Keepass
