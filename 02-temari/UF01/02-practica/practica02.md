@@ -1,8 +1,10 @@
 # PRACTICA 02 - KEEPASS
 
+## pràctica original
+
 [link a pràctica](https://gitlab.com/pautome/m6-smxpub-2324/-/blob/main/UF1-seguretat-passiva/Reptes/02-gestor-contrasenyes/gestor-contrasenyes.md?ref_type=heads)
 
-## procés detallat
+## enunciat de la pràctica detallat
 
 1. **Instal·lació de KeePassX a Linux**
     - Obre el terminal a la màquina física.
