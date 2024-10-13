@@ -19,5 +19,9 @@
 
 # 10102024
 
-- start pràctica Keepass
+- intro seguretat física
 - kahoot [seguretat física](https://create.kahoot.it/details/ee0343bb-c5c5-46f5-abc4-b57758aec4b9)
+
+# 14102024
+
+- start pràctica Keepass
