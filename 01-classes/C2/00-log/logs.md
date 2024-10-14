@@ -24,4 +24,4 @@
 
 # 14102024
 
-- start pràctica Keepass
+- repàs general pràctica john per examen pràctic
