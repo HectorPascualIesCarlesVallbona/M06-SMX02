@@ -22,7 +22,12 @@ zip2john fitxer.zip > fitxer-hash-el-meu-nom-cognom.txt
   ```
 
 - `fitxer-hash.txt` => l'extret a
-- `CODI`=> ```bash hashcat -h | grep -i zip```
+- `CODI`=>
+
+  ```bash
+  hashcat -h | grep -i zip
+  ```
+
 - veure resultat procès => ```bash hashcat --show -m CODI -a 0 fitxer-hash.txt fitxer-diccionari.txt```
 
 ### final
