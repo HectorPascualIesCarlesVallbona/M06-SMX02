@@ -28,12 +28,20 @@ zip2john fitxer.zip > fitxer-hash-el-meu-nom-cognom.txt
 ### final
 
 - descomprimim *.zip amb el pass obtingut
-- ```bash file confidencial.gif``` => confidencial.txt
+
+```bash
+file confidencial.gif
+```
+
+=> confidencial.txt
+
 - descarrega imatge disc dur i afegir a `controlador SATA`
 
 ## 2on: SO
 
-```bash # fdisk -l```
+```bash
+fdisk -l
+```
 
 ### muntem disc a crackejar i passem tot a carpeta temporal per treballar
 
