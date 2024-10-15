@@ -25,3 +25,8 @@
 # 14102024
 
 - repàs general pràctica john per examen pràctic
+
+# 15102024
+
+- teoria seguretat física
+- kahoot [seguretat física](https://create.kahoot.it/details/ee0343bb-c5c5-46f5-abc4-b57758aec4b9)

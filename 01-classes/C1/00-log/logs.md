@@ -16,5 +16,4 @@
 
 # 15102024
 
-- start pràctica Keepass
-- kahoot [seguretat física](https://create.kahoot.it/details/ee0343bb-c5c5-46f5-abc4-b57758aec4b9)
+- repàs esquemàtic de pràctica john the ripper
