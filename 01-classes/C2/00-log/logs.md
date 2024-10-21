@@ -30,3 +30,8 @@
 
 - teoria seguretat física
 - kahoot [seguretat física](https://create.kahoot.it/details/ee0343bb-c5c5-46f5-abc4-b57758aec4b9)
+
+# 21102024
+
+- comentaris examen anterior
+- pràctica keepass sense windows

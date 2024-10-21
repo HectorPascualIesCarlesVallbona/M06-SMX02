@@ -17,3 +17,8 @@
 # 15102024
 
 - repàs esquemàtic de pràctica john the ripper
+
+# 18102024
+
+- comentaris examen anterior
+- pràctica keepass sense windows
