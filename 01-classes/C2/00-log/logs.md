@@ -35,3 +35,7 @@
 
 - comentaris examen anterior
 - pràctica keepass sense windows
+
+# 24102024
+
+- examen teòric
