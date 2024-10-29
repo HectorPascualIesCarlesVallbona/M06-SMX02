@@ -39,3 +39,12 @@
 # 24102024
 
 - examen teòric
+
+# 28102024
+
+- revisió examen teòric
+- continuar pràctica Keepass
+
+# 29102024
+
+- acabar pràctica Keepass
