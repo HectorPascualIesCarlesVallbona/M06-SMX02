@@ -36,6 +36,11 @@
 - comentaris examen anterior
 - pràctica keepass sense windows
 
+# 22102024
+
+- repàs temari seguretat passiva abans examen
+- creació resum d'alguna part del temari
+
 # 24102024
 
 - examen teòric

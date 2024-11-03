@@ -31,3 +31,11 @@
 
 - revisió examen teòric
 - acabar pràctica Keepass
+
+# 04112024
+
+- mostrar calendari
+- Repàs legislació
+- Vídeo Compliment normatiu
+- Vídeo LOPD
+- Activitat LOPD
