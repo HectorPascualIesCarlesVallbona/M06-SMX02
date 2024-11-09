@@ -53,3 +53,15 @@
 # 29102024
 
 - acabar pràctica Keepass
+
+# 05112024
+
+- pujar totes les pràctiques a moodle
+
+# 07112024
+
+- mostrar calendari
+- Repàs legislació
+- Vídeo Compliment normatiu
+- Vídeo LOPD
+- Activitat LOPD

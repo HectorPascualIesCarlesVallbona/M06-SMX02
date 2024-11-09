@@ -32,10 +32,18 @@
 - revisió examen teòric
 - acabar pràctica Keepass
 
-# 04112024
+# 05112024
+
+- pujar totes les pràctiques a moodle
+
+# 07112024
+
+- Activitat LOPD
+
+# 08112024
 
 - mostrar calendari
-- Repàs legislació
+- comentar pràctica activitat LOPD amb positiu a l'alumne que ho vulgui explicar a la pissarra
+- Repàs legislació => teoria fins a 5. CONCEPTES RELLEVANTS, sencer
 - Vídeo Compliment normatiu
 - Vídeo LOPD
-- Activitat LOPD
