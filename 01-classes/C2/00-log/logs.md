@@ -64,8 +64,9 @@
 
 # 11112024
 
-- mostrar calendari
-- Vídeo Compliment normatiu
-- Vídeo LOPD
+- [x] mostrar calendari
+- [x] Vídeo Compliment normatiu
+- [x] Vídeo LOPD
 - Repàs legislació
+- 0.5 MÁS A JOAN
 
