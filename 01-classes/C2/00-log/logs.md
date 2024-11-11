@@ -60,8 +60,12 @@
 
 # 07112024
 
+- Activitat LOPD
+
+# 11112024
+
 - mostrar calendari
-- Repàs legislació
 - Vídeo Compliment normatiu
 - Vídeo LOPD
-- Activitat LOPD
+- Repàs legislació
+
