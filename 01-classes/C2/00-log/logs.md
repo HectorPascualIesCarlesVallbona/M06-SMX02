@@ -67,6 +67,19 @@
 - [x] mostrar calendari
 - [x] Vídeo Compliment normatiu
 - [x] Vídeo LOPD
-- Repàs legislació
+- [x] Repàs legislació
 - 0.5 MÁS A JOAN
+- 0.5 NADIR
+
+# 14112024
+- inici pràctica LSSI
+
+# 18112024
+- teoria LSSI
+- teoria LPI
+- Kahoot
+
+# 19112024
+- Kahoot
+
 

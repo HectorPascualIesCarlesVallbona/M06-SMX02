@@ -47,3 +47,16 @@
 - Repàs legislació => teoria fins a 5. CONCEPTES RELLEVANTS, sencer
 - Vídeo Compliment normatiu
 - Vídeo LOPD
+
+# 11112024
+- pràctica LSSI
+
+# 19112024
+
+- explicar pràctica LSSI
+- Repàs legislació => teoria fins a 5. CONCEPTES RELLEVANTS, sencer
+- Kahoot
+
+
+- 0,5 nil
+- 0,5 Mohammed
