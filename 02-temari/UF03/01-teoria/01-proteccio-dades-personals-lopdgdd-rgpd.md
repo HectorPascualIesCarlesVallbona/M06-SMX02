@@ -193,6 +193,7 @@
 
 - Exemples d’autoritats: Autoritat Catalana de Protecció de Dades, Agència Espanyola de Protecció de Dades.
 - **Funcions**: Informar, assessorar, controlar, i sancionar.
+- **Nota**: La notificació de violacions de seguretat a l'AEPD és obligatòria.
 
 ## 10. MESURES DE RESPONSABILITAT ACTIVA
 
