@@ -51,7 +51,7 @@
 - **Objectius**:
   - Protegir els drets individuals.
   - Uniformitzar la regulació dins la UE.
-  - Reforçar la seguretat jurídica i la confiança per al desenvolupament de l’economia digital.
+  - Reforçar la seguretat jurídica i la confiança per al desenvolupament de l’economia digital. 
 - **Exemple**: Google ha de complir amb el RGPD a Europa, independentment d'on tingui la seva seu.
 
 ## 3. QUAN VA ENTRAR EN VIGOR?
@@ -67,6 +67,7 @@
 - Tractaments automatitzats i manuals.
 - **Exemple**: Una empresa de telefonia ha de complir la normativa amb les dades dels seus clients particulars.
 - **No s’aplica a**: Dades de persones jurídiques, fitxers no estructurats, o ús personal/domèstic.
+- **Warning!**: Minimitzar les dades recollides és una obligació del principi de "minimització de dades" segons la LOPD-GDD
 
 ### Àmbit territorial
 
