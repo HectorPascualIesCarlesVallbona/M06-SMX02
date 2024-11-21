@@ -58,6 +58,9 @@
 - Kahoot
 
 # 21112024
+- explicar LPI
+
+# 22112024
 - repàs general abans examen LOPD, LSSI i LPI
 
 

@@ -76,6 +76,14 @@ Abans de signar un contracte electrònic, els prestadors han d’oferir:
 
 *Exemple*: Una plataforma de subscripció informa sobre la possibilitat de revisar i corregir dades abans de pagar.
 
+### 2.4 Protecció de dades
+
+Complir amb la normativa de protecció de dades personals, informant els usuaris sobre la recollida i tractament de les seves dades, i obtenint el seu consentiment quan sigui necessari.
+
+### 2.5 Cookies
+ 
+Informar sobre l'ús de cookies, obtenint el consentiment informat dels usuaris abans de la seva instal·lació, excepte en els casos en què estiguin exemptes.
+
 ---
 
 ## 3. Responsabilitat dels prestadors de serveis
