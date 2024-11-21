@@ -99,6 +99,8 @@
 
 - Ha de ser inequívoc i explícit. No s’accepta el consentiment tàcit ni la inacció.
 - **Exemple**: Una casella que cal marcar expressament per donar consentiment.
+- **Exemple pràctic**: Al comprar un PC, instal·lar programari addicional sense autorització podria implicar tractar dades personals sense permís, infringint aquesta normativa.
+
 
 #### Quan cal consentiment explícit?
 
