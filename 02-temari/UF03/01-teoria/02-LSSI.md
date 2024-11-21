@@ -31,7 +31,7 @@ La **LSSI** regula les activitats de la societat de la informació i el comerç 
 - Fomentar el desenvolupament del comerç electrònic.  
 - Protegir els drets dels usuaris d'Internet.  
 
-*Exemple*: Una empresa que ofereix serveis de consultoria en línia ha de seguir les normes per garantir la protecció dels seus clients.
+*Exemple*: La LSSI-CE obliga a informar de manera clara i comprensible sobre els preus, incloent-hi impostos i despeses addicionals
 
 ### 1.2 Àmbit d'aplicació
 
@@ -81,7 +81,7 @@ Abans de signar un contracte electrònic, els prestadors han d’oferir:
 Complir amb la normativa de protecció de dades personals, informant els usuaris sobre la recollida i tractament de les seves dades, i obtenint el seu consentiment quan sigui necessari.
 
 ### 2.5 Cookies
- 
+
 Informar sobre l'ús de cookies, obtenint el consentiment informat dels usuaris abans de la seva instal·lació, excepte en els casos en què estiguin exemptes.
 
 ---
