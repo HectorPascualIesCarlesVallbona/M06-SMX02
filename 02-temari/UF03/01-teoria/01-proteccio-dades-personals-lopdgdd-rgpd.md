@@ -92,7 +92,7 @@
 
 ### Categories especials de dades personals
 
-- Inclou dades com l’origen racial, creences religioses, dades de salut, etc.
+- Inclou dades com l’origen racial, creences religioses, dades de salut, opinions polítiques, afiliació sindical, dades genètiques, dades biomètriques, orientació o vida sexual...
 - **Exemple**: Les dades mèdiques són especialment sensibles i requereixen més protecció.
 
 ### El consentiment
