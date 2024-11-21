@@ -57,6 +57,9 @@
 - Repàs legislació => teoria fins a 5. CONCEPTES RELLEVANTS, sencer
 - Kahoot
 
+# 21112024
+- repàs general abans examen LOPD, LSSI i LPI
+
 
 - 0,5 nil
 - 0,5 Mohammed

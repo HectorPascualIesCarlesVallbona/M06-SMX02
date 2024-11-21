@@ -82,4 +82,7 @@
 # 19112024
 - Kahoot
 
+# 21112024
+- repàs general abans examen LOPD, LSSI i LPI
+
 
