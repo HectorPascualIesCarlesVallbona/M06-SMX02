@@ -64,5 +64,6 @@
 - repàs general abans examen LOPD, LSSI i LPI
 
 
-- 0,5 nil
-- 0,5 Mohammed
+# 28112024
+- teoria backup
+- teoria RAID

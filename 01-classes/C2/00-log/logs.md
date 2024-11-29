@@ -85,4 +85,8 @@
 # 21112024
 - repàs general abans examen LOPD, LSSI i LPI
 
+# 28112024
+- teoria backup
+- teoria RAID
+
 
