@@ -1,9 +1,5 @@
 ### REPTE: Còpia de Seguretat en Linux
 
-Tens tota la raó. Durant la instal·lació d'Ubuntu Server hi ha diverses opcions que cal configurar. A continuació, et detallo les passes específiques per la instal·lació des de zero fins a tenir l'Ubuntu Server configurat correctament per aquesta pràctica:
-
----
-
 ### **1. Instal·lació d'Ubuntu Server**
 
 1. **Inici de la instal·lació**:
