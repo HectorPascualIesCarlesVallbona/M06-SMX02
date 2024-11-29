@@ -16,14 +16,6 @@
    - Introdueix un nom d'usuari i contrasenya per accedir al sistema.
    - **ATENCIÓ**: Pots posar el teu nom complet com a usuari inicial, ja que després crearàs l'usuari específic per al backup.
 
-4. **Configuració de la xarxa**:
-   - Selecciona "Configuració manual".
-   - Introdueix una IP estàtica de classe C, per exemple:
-     - Adreça IP: `192.168.1.10`
-     - Màscara de xarxa: `/24`
-     - Passarel·la (Gateway): `192.168.1.1`
-     - DNS: `8.8.8.8`
-
 5. **Particions del disc**:
    - Escull "Use an entire disk" o "Manual" si vols personalitzar.
    - Assegura't que el disc seleccionat és l'adequat. Si només hi ha un, confirma i continua.
@@ -31,7 +23,7 @@
 6. **Selecció de paquets i serveis**:
    - **Configuració del servidor SSH**:
      - Activa l'opció "Instal·lar SSH server" (és important per aquesta pràctica).
-   - Deixa la resta de paquets desmarcats per mantenir el sistema lleuger. Instal·larem el que calgui més tard.
+    - Deixa la resta de paquets desmarcats per mantenir el sistema lleuger. Instal·larem el que calgui més tard.
 
 7. **Finalització de la instal·lació**:
    - Quan acabi, el sistema reiniciarà. Retira el mitjà d'instal·lació (USB o ISO).
