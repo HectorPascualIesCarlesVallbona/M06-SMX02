@@ -1,4 +1,4 @@
-# **REPTE: Còpia de Seguretat en Linux**
+# **REPTE: CÒPIA DE SEGURETAT EN SERVIDOR LINUX**
 
 ### **1. Instal·lació i configuració d'Ubuntu Server**
 
