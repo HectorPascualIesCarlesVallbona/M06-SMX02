@@ -1,116 +1,116 @@
-### REPTE: Còpia de Seguretat en Linux
+# **REPTE: Còpia de Seguretat en Linux**
 
-### **1. Instal·lació d'Ubuntu Server**
+### **1. Instal·lació i configuració d'Ubuntu Server**
 
-1. **Inici de la instal·lació**:
-   - Selecciona l'idioma (Català, si està disponible).
-   - Selecciona l'opció "Instal·lar Ubuntu Server".
+#### **1.1. Inici de la instal·lació**
+- Selecciona l'idioma (Català, si està disponible).
+- Selecciona l'opció "Instal·lar Ubuntu Server".
 
-2. **Configuració bàsica**:
-   - **Idioma del sistema**: Selecciona l'idioma que prefereixis.
-   - **Disposició del teclat**: Configura el teclat (normalment, "Espanyol").
-   - **Nom de la màquina (hostname)**:
-     - Quan ho demani, introdueix `sbak-nom-cognom`.
+#### **1.2. Configuració bàsica**
+- **Idioma del sistema**: Selecciona l'idioma que prefereixis.
+- **Disposició del teclat**: Configura el teclat (normalment, "Espanyol").
+- **Nom de la màquina (hostname)**:
+  - Introdueix `sbak-nom-cognom`.
 
-3. **Creació de l'usuari inicial**:
-   - Introdueix un nom d'usuari i contrasenya per accedir al sistema.
-   - **ATENCIÓ**: Pots posar el teu nom complet com a usuari inicial, ja que després crearàs l'usuari específic per al backup.
+#### **1.3. Creació de l'usuari inicial**
+- Introdueix un nom d'usuari i contrasenya per accedir al sistema.
+- **Nota**: Pots posar el teu nom complet com a usuari inicial. Més tard crearàs l'usuari específic per al backup.
 
-5. **Particions del disc**:
-   - Escull "Use an entire disk" o "Manual" si vols personalitzar.
-   - Assegura't que el disc seleccionat és l'adequat. Si només hi ha un, confirma i continua.
+#### **1.4. Particions del disc**
+- Escull una de les opcions:
+  - "Use an entire disk" (automàtic).
+  - "Manual" (personalitzat).
+- Assegura't que el disc seleccionat és l'adequat. Si només hi ha un, confirma i continua.
 
-6. **Selecció de paquets i serveis**:
-   - **Configuració del servidor SSH**:
-     - Activa l'opció "Instal·lar SSH server" (és important per aquesta pràctica).
-    - Deixa la resta de paquets desmarcats per mantenir el sistema lleuger. Instal·larem el que calgui més tard.
+#### **1.5. Selecció de paquets i serveis**
+- **Configuració del servidor SSH**:
+  - Activa l'opció "Instal·lar SSH server" (imprescindible per aquesta pràctica).
+- Deixa la resta de paquets desmarcats per mantenir el sistema lleuger.
 
-7. **Finalització de la instal·lació**:
-   - Quan acabi, el sistema reiniciarà. Retira el mitjà d'instal·lació (USB o ISO).
-   - Un cop arranqui, introdueix el nom d'usuari i contrasenya creats durant la instal·lació.
+#### **1.6. Finalització de la instal·lació**
+- Quan acabi, el sistema reiniciarà automàticament.
+- Retira el mitjà d'instal·lació (USB o ISO).
+- Un cop arranqui, introdueix el nom d'usuari i contrasenya creats durant la instal·lació.
 
 ---
 
+#### **1.7. Configuració de la màquina després de la instal·lació**
 
-#### **1. Configuració del servidor de còpies de seguretat (Ubuntu Server)**
+##### **1.7.1. Canviar el nom del host**
+1. Comanda per configurar el nom del host:
+   ```bash
+   sudo hostnamectl set-hostname sbak-nom-cognom
+   ```
+2. Comprova el canvi:
+   ```bash
+   hostnamectl
+   ```
+3. Reinicia la màquina virtual per aplicar els canvis:
+   ```bash
+   sudo reboot
+   ```
 
-1. **Crear una màquina virtual (VM) Ubuntu Server**:
-   - **Nom del host:** 
+##### **1.7.2. Configuració de la xarxa interna**
+1. **A VirtualBox**:
+   - Assigna la xarxa interna amb el nom `LAN-nom-cognom`.
+   - Executa la màquina virtual. Tingues paciència, pot trigar a carregar.
+   - Quan hagi acabat el procés, introdueix els credencials creats durant la instal·lació.
+
+2. **Configura una IP estàtica amb Netplan**:
+   - Edició del fitxer de configuració:
      ```bash
-     sudo hostnamectl set-hostname sbak-nom-cognom
+     sudo nano /etc/netplan/01-netcfg.yaml
      ```
-   - **Comprovació del canvi**
-    ```bash
-      hostnamectl
-    ```
-   - **Reinicia la màquina virtual per aplicar el canvi**:
+   - Exemple de configuració:
+     ```yaml
+     network:
+       version: 2
+       ethernets:
+         enp0s3:
+           addresses:
+             - 192.168.1.10/24
+           routes:
+             - to: default
+               via: 192.168.1.1
+           nameservers:
+             addresses:
+               - 8.8.8.8
+     ```
+     **Notes importants**:
+     - Cada nivell d'identació ha de tenir exactament 2 espais (no tabulacions).
+     - Les llistes (p. ex. `addresses:`) han de començar amb un guió (`-`) seguit d'un espai.
+
+   - Aplica els canvis:
      ```bash
-     sudo reboot
+     sudo netplan apply
      ```
 
-2. **Configurar la xarxa interna**:
-   - A VirtualBox:
-     - Assigna la xarxa interna amb el nom a paràmetres de la MV `LAN-nom-cognom`
-    - executa la MV, tardarà una estona. Tingues paciència. Quanhagi acabat el llistat d'instruccions clicka `ENTER` per a introduïr els credencials
-   - Configura una IP estàtica amb Netplan:
-     - Edició del fitxer de configuració de la xarxa:
-       ```bash
-       sudo nano /etc/netplan/01-netcfg.yaml
+##### **1.7.3. Configuració del servidor SSH**
+1. **Instal·lar el servei SSH**:
+   ```bash
+   sudo apt update && sudo apt install -y openssh-server
+   ```
+2. **Verificar que està actiu**:
+   ```bash
+   sudo systemctl status ssh
+   ```
+3. **Si el servei no està actiu**:
+   - **Activa el servei SSH perquè s'iniciï automàticament en cada reinici**:
+     ```bash
+     sudo systemctl enable ssh
+     ```
+   - **Inicia el servei manualment**:
+     ```bash
+     sudo systemctl start ssh
+     ```
+   - **Comprova que el servei està funcionant**:
+     ```bash
+     sudo systemctl status ssh
+     ```
+     - Hauries de veure una línia amb:
        ```
-       Exemple de configuració:
-       **Nota**: 
-        - Cada nivell d'identació ha de tenir exactament 2 espais (no tabulacions).
-        - Les llistes (com addresses:) han de començar amb un guió (-) seguit d'un espai.
-          ```yaml
-            network:
-              version: 2
-              ethernets:
-                enp0s3:
-                  addresses:
-                    - 192.168.1.10/24
-                  routes:
-                    - to: default
-                      via: 192.168.1.1
-                  nameservers:
-                    addresses:
-                      - 8.8.8.8
-          ```
-     - Aplica els canvis:
-       ```bash
-       sudo netplan apply
+       Active: active (running)
        ```
-
-3. **Configurar SSH**:
-   1. Instal·lar el servei:
-        ```bash
-        sudo apt update && sudo apt install -y openssh-server
-        ```
-   2. Verificar que està en funcionament:
-        ```bash
-        sudo systemctl status ssh
-        ```
-   3. Si diu **inactive (dead)** o **failed**, cal solucionar-ho:
-      1. **Activa el servei SSH**:
-            ```bash
-            sudo systemctl enable ssh
-            ```
-
-            Això farà que SSH s'iniciï automàticament en cada reinici.
-
-      2. **Inicia el servei SSH manualment**:
-          ```bash
-          sudo systemctl start ssh
-          ```
-
-      3. **Comprova que està actiu**:
-          ```bash
-          sudo systemctl status ssh
-          ```
-
-        Hauries de veure una línia amb:
-          ```
-          Active: active (running)
-          ```
 ---
 
 #### **2. Configuració del client de còpies de seguretat (Ubuntu Desktop)**
