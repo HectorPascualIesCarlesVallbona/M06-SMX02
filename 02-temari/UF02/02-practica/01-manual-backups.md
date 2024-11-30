@@ -39,6 +39,10 @@
      ```bash
      sudo hostnamectl set-hostname sbak-nom-cognom
      ```
+   - **Comprovació del canvi**
+    ```bash
+      hostnamectl
+    ```
    - **Reinicia la màquina virtual per aplicar el canvi**:
      ```bash
      sudo reboot
@@ -46,50 +50,77 @@
 
 2. **Configurar la xarxa interna**:
    - A VirtualBox:
-     - Assigna la xarxa interna amb el nom `LAN-nom-cognom`.
+     - Assigna la xarxa interna amb el nom a paràmetres de la MV `LAN-nom-cognom`
+    - executa la MV, tardarà una estona. Tingues paciència. Quanhagi acabat el llistat d'instruccions clicka `ENTER` per a introduïr els credencials
    - Configura una IP estàtica amb Netplan:
      - Edició del fitxer de configuració de la xarxa:
        ```bash
        sudo nano /etc/netplan/01-netcfg.yaml
        ```
        Exemple de configuració:
-       ```yaml
-       network:
-         version: 2
-         ethernets:
-           enp0s3:
-             addresses:
-               - 192.168.1.10/24
-             gateway4: 192.168.1.1
-             nameservers:
-               addresses:
-                 - 8.8.8.8
-       ```
+       **Nota**: 
+        - Cada nivell d'identació ha de tenir exactament 2 espais (no tabulacions).
+        - Les llistes (com addresses:) han de començar amb un guió (-) seguit d'un espai.
+          ```yaml
+            network:
+              version: 2
+              ethernets:
+                enp0s3:
+                  addresses:
+                    - 192.168.1.10/24
+                  routes:
+                    - to: default
+                      via: 192.168.1.1
+                  nameservers:
+                    addresses:
+                      - 8.8.8.8
+          ```
      - Aplica els canvis:
        ```bash
        sudo netplan apply
        ```
 
 3. **Configurar SSH**:
-   - Instal·lar el servei:
-     ```bash
-     sudo apt update && sudo apt install -y openssh-server
-     ```
-   - Verificar que està en funcionament:
-     ```bash
-     sudo systemctl status ssh
-     ```
+   1. Instal·lar el servei:
+        ```bash
+        sudo apt update && sudo apt install -y openssh-server
+        ```
+   2. Verificar que està en funcionament:
+        ```bash
+        sudo systemctl status ssh
+        ```
+   3. Si diu **inactive (dead)** o **failed**, cal solucionar-ho:
+      1. **Activa el servei SSH**:
+            ```bash
+            sudo systemctl enable ssh
+            ```
 
+            Això farà que SSH s'iniciï automàticament en cada reinici.
+
+      2. **Inicia el servei SSH manualment**:
+          ```bash
+          sudo systemctl start ssh
+          ```
+
+      3. **Comprova que està actiu**:
+          ```bash
+          sudo systemctl status ssh
+          ```
+
+        Hauries de veure una línia amb:
+          ```
+          Active: active (running)
+          ```
 ---
 
 #### **2. Configuració del client de còpies de seguretat (Ubuntu Desktop)**
 
 1. **Crear una màquina virtual Ubuntu Desktop**:
    - **Nom del host:**
-     ```bash
-     sudo hostnamectl set-hostname client-nom-cognom
-     sudo reboot
-     ```
+        ```bash
+        sudo hostnamectl set-hostname client-nom-cognom
+        sudo reboot
+        ```
 
 2. **Configurar la xarxa interna**:
    - Assigna la xarxa interna `LAN-nom-cognom` a la màquina.
