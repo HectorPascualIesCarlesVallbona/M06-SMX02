@@ -262,12 +262,18 @@ Amb aquests passos, l'usuari `<nom_usuari>` tindrà permisos de superusuari corr
 ##### **2.2.3. Verificació de connectivitat**
 1. **Comprova la connexió amb el servidor**:
    ```bash
-   ping 192.168.1.10
+      ping 192.168.1.10
    ```
 2. **Comprova que pots connectar-te via SSH al servidor**:
-   ```bash
-   ssh nom-cognom@192.168.1.10
-   ```
+    ```bash
+      ssh nom-cognom@192.168.1.10
+    ```
+3. **Desconnecta del servidor per continuar la pràctica**:
+    ```bash
+      exit
+    ```
+
+    [Per què he de desconnectar?](00-connexio-SSH.md)
 ---
 
 #### **3. Configuració d’autenticació SSH sense contrasenya**
