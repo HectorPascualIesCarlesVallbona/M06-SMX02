@@ -288,22 +288,24 @@ Amb aquests passos, l'usuari `<nom_usuari>` tindrà permisos de superusuari corr
 2. **Copiar la clau pública al servidor**:
    - Executa:
      ```bash
-     ssh-copy-id ubak-nom-cognom@192.168.1.10
+     ssh-copy-id nom-cognom@192.168.1.10
      ```
 
 3. **Prova de connexió SSH sense contrasenya**:
    - Connecta’t al servidor:
      ```bash
-     ssh ubak-nom-cognom@192.168.1.10
+     ssh nom-cognom@192.168.1.10
      ```
 
 ---
 
 #### **4. Preparar el servidor per a les còpies de seguretat**
 
+0. **Connecta al servidor**
+
 1. **Crear l’usuari de backup**:
    ```bash
-   sudo adduser ubak-nom-cognom
+      sudo adduser ubak-nom-cognom
    ```
 
 2. **Crear el directori per als backups**:
