@@ -89,4 +89,8 @@
 - teoria backup
 - teoria RAID
 
+# 09122024
+- explicar bàsics importants RAID
+- continuació amb pràctica RAIDs
+
 
