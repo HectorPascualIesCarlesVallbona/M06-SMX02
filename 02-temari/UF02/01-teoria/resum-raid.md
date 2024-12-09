@@ -99,12 +99,20 @@ Aquí tens l'índex clickable generat per a tot el document:
 
 Quan els discos que formen un RAID tenen diferents capacitats d'emmagatzematge, el volum total del RAID es calcula basant-se en el disc amb **menor capacitat**. Això es deu a la necessitat d'una distribució uniforme de les dades entre els discos, especialment en configuracions que utilitzen **striping** o **paritat**.
 
+Aquí tens la secció corregida perquè sigui compatible amb qualsevol visualitzador Markdown:
+
+---
+
 ### **RAID 0 (Striping)**
 - **Volum efectiu**: El volum total és igual al nombre de discos multiplicat per la capacitat del disc **més petit**.
 - **Exemple**:
   - Discos: 1 TB, 2 TB i 3 TB.
-  - Volum total = \( 3 \times 1\ TB = 3\ TB \).
+  - Volum total = 3 × 1 TB = 3 TB.
 - **Raó**: Cada bloc de dades es divideix en stripes iguals, i només es pot utilitzar la capacitat que tots els discos poden contribuir uniformement.
+
+---
+
+Aquest format assegura que no hi hagi problemes de visualització. Si necessites més ajustos, avisa'm! 😊
 
 ---
 
@@ -112,16 +120,20 @@ Quan els discos que formen un RAID tenen diferents capacitats d'emmagatzematge, 
 - **Volum efectiu**: Igual a la capacitat del disc **més petit**, ja que les dades es dupliquen exactament en cada disc.
 - **Exemple**:
   - Discos: 1 TB, 2 TB.
-  - Volum total = \( 1\ TB \) (el disc de 2 TB només utilitzarà 1 TB per igualar el disc més petit).
+  - Volum total = 1 TB (el disc de 2 TB només utilitzarà 1 TB per igualar el disc més petit).
 - **Raó**: La duplicació de dades requereix que tots els discos emmagatzemin la mateixa quantitat.
 
 ---
 
+Aquest format és més robust i no depèn de símbols que puguin causar problemes de renderització. Si vols, puc aplicar el mateix estil a tot el document. 😊
+
+---
+
 ### **RAID 5 (Striping amb paritat)**
-- **Volum efectiu**: \((N - 1) \times capacitat\ del\ disc\ més\ petit\), on \(N\) és el nombre total de discos.
+- **Volum efectiu**: (N - 1) × capacitat del disc més petit, on N és el nombre total de discos.
 - **Exemple**:
   - Discos: 1 TB, 2 TB i 3 TB.
-  - Volum total = \( (3 - 1) \times 1\ TB = 2\ TB \).
+  - Volum total = (3 - 1) × 1 TB = 2 TB.
 - **Raó**: La paritat i les dades s’han de distribuir uniformement, de manera que només es pot utilitzar la capacitat comuna entre tots els discos.
 
 ---
@@ -130,7 +142,7 @@ Quan els discos que formen un RAID tenen diferents capacitats d'emmagatzematge, 
 - **Volum efectiu**: La capacitat total és la suma de tots els discos, independentment de les mides.
 - **Exemple**:
   - Discos: 1 TB, 2 TB i 3 TB.
-  - Volum total = \( 1 + 2 + 3 = 6\ TB \).
+  - Volum total = 1 + 2 + 3 = 6 TB.
 - **Raó**: Aquest tipus no utilitza paritat ni striping, per la qual cosa pot aprofitar completament la capacitat de cada disc. **No té tolerància a fallades.**
 
 ---
@@ -146,17 +158,22 @@ En configuracions RAID amb discos de diferents capacitats:
 
 La **paritat** és un mecanisme utilitzat en els sistemes RAID (com RAID 5) per garantir que les dades es puguin recuperar si falla un dels discos. Es basa en un càlcul matemàtic senzill que compara les dades emmagatzemades en els discos per crear un "bloc de paritat". Aquest bloc permet reconstruir les dades perdudes en cas d'error.
 
+
 1. **Creació del bloc de paritat**:
    - Es calcula a partir dels blocs de dades dels altres discos.
    - S'utilitza una operació XOR (o exclusiu), que té aquestes propietats:
-     - \( 1 \oplus 1 = 0 \)
-     - \( 0 \oplus 0 = 0 \)
-     - \( 1 \oplus 0 = 1 \)
-     - \( 0 \oplus 1 = 1 \)
-   - Exemple:
-     - Bloc 1: 1010 (disc 1)
-     - Bloc 2: 1100 (disc 2)
-     - Bloc de paritat: 0110 (resultat de 1010 XOR 1100).
+     - 1 ⊕ 1 = 0
+     - 0 ⊕ 0 = 0
+     - 1 ⊕ 0 = 1
+     - 0 ⊕ 1 = 1
+   - **Exemple**:
+     - Bloc 1: `1010` (disc 1)
+     - Bloc 2: `1100` (disc 2)
+     - Bloc de paritat: `0110` (resultat de `1010 XOR 1100`).
+
+---
+
+Aquest format és clar i es pot visualitzar correctament en qualsevol entorn de Markdown. Si cal aplicar aquest tipus d'ajustos a altres parts del document, només has de dir-m'ho! 😊
 
 2. **Recuperació de dades perdudes**:
    - Si falla un disc, les dades es poden reconstruir combinant els blocs de dades restants i el bloc de paritat.
@@ -262,18 +279,24 @@ Ara falta el Bloc A (1010). Però tenim:
 
 #### **Càlcul per recuperar el Bloc A**:
 Utilitzem la fórmula del XOR per recuperar el bloc perdut:
-\[
-A = P \oplus B
-\]
+```
+A = P ⊕ B
+```
 
-1. Paritat P: **0110**
-2. Bloc B: **1100**
+1. **Paritat P**: `0110`  
+2. **Bloc B**: `1100`  
 
 **Pas a pas del XOR:**
-- Primera columna: \( 0 \oplus 1 = 1 \)
-- Segona columna: \( 1 \oplus 1 = 0 \)
-- Tercera columna: \( 1 \oplus 0 = 1 \)
-- Quarta columna: \( 0 \oplus 0 = 0 \)
+- Primera columna: 0 ⊕ 1 = 1  
+- Segona columna: 1 ⊕ 1 = 0  
+- Tercera columna: 1 ⊕ 0 = 1  
+- Quarta columna: 0 ⊕ 0 = 0  
+
+**Resultat recuperat**: `1010`
+
+---
+
+Aquest format s'assegura que les fórmules es mostrin correctament i siguin fàcilment llegibles en qualsevol entorn de Markdown. Vols que ajusti altres parts del document de manera similar? 😊
 
 **Resultat recuperat:** Bloc A = **1010**
 
