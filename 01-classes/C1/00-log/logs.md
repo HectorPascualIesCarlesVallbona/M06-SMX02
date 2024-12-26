@@ -67,3 +67,9 @@
 # 28112024
 - teoria backup
 - teoria RAID
+
+# 13122024
+- pràctica RAIDS
+- repàs RAID
+- Zoher: .5
+- Ian: .5

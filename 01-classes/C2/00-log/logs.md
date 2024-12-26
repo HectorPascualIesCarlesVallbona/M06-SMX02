@@ -93,4 +93,9 @@
 - explicar bàsics importants RAID
 - continuació amb pràctica RAIDs
 
+# 16122024
+- Xavi .5
+- Muha .5
+- repàs anterior examen
+
 
