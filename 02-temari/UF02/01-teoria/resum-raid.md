@@ -112,20 +112,12 @@ Aquí tens la secció corregida perquè sigui compatible amb qualsevol visualitz
 
 ---
 
-Aquest format assegura que no hi hagi problemes de visualització. Si necessites més ajustos, avisa'm! 😊
-
----
-
 ### **RAID 1 (Mirroring)**
 - **Volum efectiu**: Igual a la capacitat del disc **més petit**, ja que les dades es dupliquen exactament en cada disc.
 - **Exemple**:
   - Discos: 1 TB, 2 TB.
   - Volum total = 1 TB (el disc de 2 TB només utilitzarà 1 TB per igualar el disc més petit).
 - **Raó**: La duplicació de dades requereix que tots els discos emmagatzemin la mateixa quantitat.
-
----
-
-Aquest format és més robust i no depèn de símbols que puguin causar problemes de renderització. Si vols, puc aplicar el mateix estil a tot el document. 😊
 
 ---
 
@@ -172,8 +164,6 @@ La **paritat** és un mecanisme utilitzat en els sistemes RAID (com RAID 5) per 
      - Bloc de paritat: `0110` (resultat de `1010 XOR 1100`).
 
 ---
-
-Aquest format és clar i es pot visualitzar correctament en qualsevol entorn de Markdown. Si cal aplicar aquest tipus d'ajustos a altres parts del document, només has de dir-m'ho! 😊
 
 2. **Recuperació de dades perdudes**:
    - Si falla un disc, les dades es poden reconstruir combinant els blocs de dades restants i el bloc de paritat.
@@ -293,12 +283,6 @@ A = P ⊕ B
 - Quarta columna: 0 ⊕ 0 = 0  
 
 **Resultat recuperat**: `1010`
-
----
-
-Aquest format s'assegura que les fórmules es mostrin correctament i siguin fàcilment llegibles en qualsevol entorn de Markdown. Vols que ajusti altres parts del document de manera similar? 😊
-
-**Resultat recuperat:** Bloc A = **1010**
 
 ---
 
