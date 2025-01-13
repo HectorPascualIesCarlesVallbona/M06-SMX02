@@ -73,3 +73,6 @@
 - repàs RAID
 - Zoher: .5
 - Ian: .5
+
+# 10012025
+- Malware
