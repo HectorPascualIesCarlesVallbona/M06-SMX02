@@ -75,4 +75,7 @@
 - Ian: .5
 
 # 10012025
-- Malware
+- Teoria Malware
+
+# 14012025
+- Teoria CVE fins al final

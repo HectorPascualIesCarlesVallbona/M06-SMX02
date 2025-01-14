@@ -98,4 +98,10 @@
 - Muha .5
 - repàs anterior examen
 
+# 13012025
+- Teoria Malware
+
+# 14012025
+- Teoria CVE fins al final
+
 
