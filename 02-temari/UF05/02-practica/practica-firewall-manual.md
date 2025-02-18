@@ -370,13 +370,17 @@ Un cop iniciada la màquina Ubuntu Server, configura la xarxa de la DMZ.
 2. Modifica el fitxer per establir una IP estàtica:
    ```yaml
    network:
-     ethernets:
-       ens3:
-         addresses: [192.168.200.10/24]
-         gateway4: 192.168.200.1
-         nameservers:
-           addresses: [8.8.8.8, 1.1.1.1]
-     version: 2
+      ethernets:
+         enp0s3:
+            addresses:
+              - 192.168.200.10/24
+            routes:
+              - to: default
+                via: 192.168.200.1
+            nameservers:
+              addresses: [8.8.8.8, 1.1.1.1]
+      version: 2
+
    ```
    **Nota:** Assegura’t que `ens3` és la interfície correcta. Pots comprovar-ho amb:
    ```bash
