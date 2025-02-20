@@ -7,7 +7,7 @@
 - [x] Nil
 - [x] Ian
 - [x] Joan
-- [] Alfonso
+- [x] Alfonso
 - [] Dani Garriga
 - [] Pablo Marrero
 - [] Eric
