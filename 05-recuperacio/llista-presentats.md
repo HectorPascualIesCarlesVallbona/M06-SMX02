@@ -13,13 +13,13 @@
 - [] Eric
 
 # UF01 - teòric
-- [] Moha
-- [] Pol Martín
-- [] Nil
-- [] Pol  Vergara
+- [x] Moha
+- [x] Pol Martín
+- [x] Nil
+- [x] Pol  Vergara
 - [] Dani Garriga
 - [] Pablo Marrero
 
 # UF01 - pràctic
-- [] Moha
-- [] Pol Vergara
+- [x] Moha
+- [x] Pol Vergara
