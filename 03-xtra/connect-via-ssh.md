@@ -41,7 +41,7 @@ Això ens serveix per a poder fer operacions de copiar i pegar text executant de
 
 
 5. **Accedeix des de la teva màquina real (host)**
-   - Obre terminal del host i executa:
+   - Obre terminal del host i executa:/home/hector/VirtualBox VMs
      ```bash
         ssh -p 2222 usuari@127.0.0.1
      ```
