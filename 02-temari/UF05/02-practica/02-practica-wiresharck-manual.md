@@ -20,7 +20,7 @@ Wireshark és un **analitzador de tràfic de xarxa** que permet capturar i exami
    - Si fas servir Ethernet: selecciona **eth0**.
 3. Fes clic a **Start** per iniciar la captura.
 
-[si no apareix wlan0, enp0s3 o eth0](wlan-or-eth0-not-found.md)
+[si no apareix wlan0, enp0s3 o eth0](02-practica-wiresharck-wlan-or-eth0-not-found.md)
 
 ---
 
@@ -66,7 +66,7 @@ Wireshark és un **analitzador de tràfic de xarxa** que permet capturar i exami
       arp
    ```
 2. Troba l’adreça MAC del **router (gateway)**.
-[find mac gateway](find-mac-gateway.md)
+[find mac gateway](02-practica-wiresharck-find-mac-gateway.md)
 
 ---
 
